@@ -21,7 +21,7 @@
                                     {{ if .Site.Params.dateformShort }}
                                         {{ .Date.Format .Site.Params.dateformShort }}
                                     {{ else }}
-                                        {{ .Date.Format "Jan 2"}}
+                                        {{ .Date.Format .Site.Params.dateform }}
                                     {{ end }}
                                 </span>
                             </a>
