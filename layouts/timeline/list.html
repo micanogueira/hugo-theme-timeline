@@ -30,6 +30,9 @@
                     {{.Params.Eventlocation}}
 
                 </p> 
+                {{ if .Params.footer }}
+                    <p class="timeline-content-footer">{{.Params.footer}}</p>
+                {{ end }}
             </div>
         </div>  
         {{ end }}   
