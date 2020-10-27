@@ -157,6 +157,11 @@ blockquote {
 
 @media screen and (max-width: 768px) {
 
+	.date {
+		right: auto;
+		left: 0;
+	}
+
 	.timeline {
 
 		&::before {
@@ -186,7 +191,8 @@ blockquote {
 			&:nth-child(odd) {
 
 				.timeline-content {
-					
+					float: left;
+
 					&::after {
 						content: '';
 						position: absolute;
