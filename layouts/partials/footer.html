@@ -7,10 +7,11 @@
             {{ end }}
             {{ if .Site.Copyright }}
                 <span>{{ .Site.Copyright| safeHTML }}</span>
-            {{ end }} 
+            {{ end }}
         </div>
-    </div> 
-  {{/*  <div>{{ partial "social-icons.html" .Site.Params.social }}</div>  */}}
+    </div>
+    <br/>
+  <div>{{ partial "social-icons.html" .Site.Params.social }}</div>
 </footer>
 <script type="text/javascript">
     $(function(){
@@ -31,7 +32,7 @@
       });
 
   } else {
-    
+
     sr.reveal('.js--fadeInLeft', {
         origin: 'left',
         distance: '300px',
@@ -47,7 +48,7 @@
       });
 
   }
-  
+
   sr.reveal('.js--fadeInLeft', {
         origin: 'left',
         distance: '300px',
