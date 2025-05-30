@@ -20,11 +20,11 @@
 
 <!-- CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
-    type="text/css"> 
+    type="text/css">
 
 
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
+{{ $style := resources.Get "scss/main.scss" | css.Sass $options | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
 {{ range $val := $.Site.Params.customCSS }}
@@ -32,7 +32,7 @@
         <link rel="stylesheet" type="text/css" href="{{ $val }}">
     {{ end }}
 {{ end }}
-  
+
 <!-- Icons -->
 {{- partial "favicons.html" . }}
 
